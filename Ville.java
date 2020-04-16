@@ -25,35 +25,53 @@ public class Ville {
 	}	 
 
 
-	//Définit le nom de la ville
+	//DÃ©finit le nom de la ville
 	public void setNomVille(String pnom){
 		nom_ville = pnom;
 	}
 
 	
-	//Définit la superfice de la ville
+	//DÃ©finit la superfice de la ville
 	public void setSuperficieVille(double psuperficie){
 		superficie_ville = psuperficie;
 	}
 
-	//Définit le nombre d'habitants
+	//DÃ©finit le nombre d'habitants
 	public void setPopulationVille(double ppopulation){
 		population_ville = ppopulation;
 	}  
 	
 	public String toString() {
-		return nom_ville + ", " + superficie_ville + " kilomètres carrés, pour " + population_ville + " habitants";
+		return nom_ville + ", " + superficie_ville + " kilomÃ¨tres carrÃ©s, pour " + population_ville + " habitants";
 	}
+        
+        public boolean estIdentiqueA(Ville ville){
+            if(nom_ville.equals(ville.getNomVille()) && superficie_ville == ville.getSuperficieVille() && population_ville == ville.getSuperficieVille()){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        
+        public boolean sontIdentiques(Ville ville1, Ville ville2){
+            if((ville1.getNomVille()).equals(ville2.getNomVille()) && ville1.getSuperficieVille() == ville2.getSuperficieVille() && ville1.getSuperficieVille() == ville2.getSuperficieVille()){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
 
 
-//Constructeur par défaut
+//Constructeur par dÃ©faut
 public Ville(){
 	 nom_ville = "inconnu";
 	 superficie_ville = 0;
 	 population_ville = 0;
 }  
 		 	 
-	 //Constructeur avec paramètres
+	 //Constructeur avec paramÃ¨tres
 	 public Ville(String pnom, double psuperficie, double ppopulation){
 		 nom_ville = pnom;
 		 superficie_ville = psuperficie;
@@ -61,3 +79,4 @@ public Ville(){
 	 }  
 
 }
+

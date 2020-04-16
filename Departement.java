@@ -42,7 +42,8 @@ public class Departement {
     public String toString() {
         String test = "";
         for(int i = 0; i < nbVillesSaisie ; i++){
-            test += tabVilles[i].toString();
+            test += i+1;
+            test += ". "+tabVilles[i].toString();
             test += "\n";
         }
 	return test;
